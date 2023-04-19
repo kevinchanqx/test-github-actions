@@ -8,11 +8,11 @@ on:
   # Adding workflow_dispatch for having a button in github console to run workflow without the need to commit and push code.
   workflow_dispatch:
 
-  jobs:
-    task-hello:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v2
-        - name: hello world
-          run: echo 'Hello World'
-          shell: bash
+jobs:
+  task-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: hello world
+        run: echo 'Hello World'
+        shell: bash
