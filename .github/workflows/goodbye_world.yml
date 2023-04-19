@@ -14,5 +14,5 @@ jobs:
       - name: goodbye world
         run: echo 'Goodbye World'
         shell: bash
-    only:
-      - merge_requests
+  only:
+    - merge_requests
