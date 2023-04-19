@@ -20,7 +20,7 @@ jobs:
       - name: Setting up node
         uses: actions/setup-node@v3
         with:
-          node_version: ${{ matrix.version }}
+          node-version: ${{ matrix.version }}
       - run: npm install
       - run: npm start
         
