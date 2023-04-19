@@ -15,9 +15,12 @@ jobs:
         version: [14]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
+      - name: Getting checkout@v2
+        uses: actions/checkout@v2
+      - name: Setting up node
+        uses: actions/setup-node@v3
         with:
           node_version: ${{ matrix.version }}
-      - name: hello world
-        run: console.log('Hello World for node')
+      - run: npm install
+      - run: npm start
+        
