@@ -10,9 +10,6 @@ on:
 
 jobs:
   task-hello:
-    strategy:
-      matrix:
-        version: [16]
     runs-on: ubuntu-latest
     steps:
       - name: Getting checkout@v2
@@ -20,7 +17,7 @@ jobs:
       - name: Setting up node
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.version }}
+          node-version: 14
       - run: npm install
       - run: npm start
         
