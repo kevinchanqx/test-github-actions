@@ -10,9 +10,14 @@ on:
 
 jobs:
   task-hello:
+    strategy:
+      matrix:
+        version: [14]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node_version: ${{ matrix.version }}
       - name: hello world
-        run: echo 'Hello World'
-        shell: bash
+        run: console.log('Hello World for node')
