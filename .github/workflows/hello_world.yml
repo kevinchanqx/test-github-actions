@@ -12,7 +12,7 @@ jobs:
   task-hello:
     strategy:
       matrix:
-        version: [14]
+        version: [16]
     runs-on: ubuntu-latest
     steps:
       - name: Getting checkout@v2
