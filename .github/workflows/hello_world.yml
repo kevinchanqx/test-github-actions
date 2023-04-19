@@ -5,7 +5,7 @@ on:
     branches:
       - main
 
-  # Adding workflow_dispatch for having a button in github console to run workflow without the need to commit and push code.
+  # Adding workflow_dispatch for having a button in github console to rerun workflow without the need to commit and push code.
   workflow_dispatch:
 
 jobs:
