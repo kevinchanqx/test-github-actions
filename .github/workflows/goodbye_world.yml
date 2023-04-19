@@ -1,0 +1,14 @@
+name: Good Bye workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+
+  jobs:
+    task-goodbye:
+      runs-on: ubuntu-latest
+      steps:
+        - name: goodbye world
+          run: echo 'Goodbye World'
+          shell: bash
